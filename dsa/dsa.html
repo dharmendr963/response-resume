@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dharmendr Kumar </title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=poppins:200,300,400,500,600,700,800,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  background: rgb(130, 209, 235);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 1190px;
+  margin: 50px;
+  background: #fff;
+  display: grid;
+  grid-template-columns: 1fr 2fr ;
+  box-shadow: 0 35px 55px rgba(0,0,0,0.1);
+}
+
+.container .left_side {
+  position: relative;
+  background: #003147;
+  padding: 40;
+}
+.profileText{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    margin: 20px;
+}
+
+.profileText .image {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 50% ;
+    overflow: hidden;
+
+}
+
+.profileText .image img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profileText h2{
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+.profileText h2 span{
+    font-size: 0.8em;
+    font-weight: 300;
+}
+.contactInfo{
+  padding-top: 40px;
+  
+}
+.title {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  margin-left: 35px;
+
+}
+
+.contactInfo ul{
+  position: relative;
+}
+.contactInfo ul li{
+  position: relative;
+  list-style: none;
+  margin: 10px 0;
+  cursor: pointer;
+  margin-left: 35px;
+  line-height: 1.4;
+}
+
+.contactInfo ul li .icon{
+  display: inline-block;
+  width: 30px;
+  font-size: 18px;
+  color: #03a9f4;
+}
+
+.contactInfo ul li span{
+  color: #fff;
+  font-weight: 300;
+}
+
+.contactInfo ul li span a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 300;
+}
+
+.contactInfo.education li{
+  margin-bottom: 10px ;
+}
+.contactInfo.education h5{
+  color:  #03a9f4;
+  font-weight: 500;
+}
+
+.contactInfo.education h4:nth-child(2){
+  color: #fff;
+  font-weight: 500;
+  
+}
+
+.contactInfo.education h4{
+  color: #fff;
+  font-weight: 300;
+  
+}
+.contactInfo.language{
+  margin-top: 5px;
+}
+
+.contactInfo.language .percent {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  display: #081921;
+  display: block;
+  margin-top: 5px;
+  
+
+}
+
+.contactInfo.language .percent div {
+  position:absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #03a9f4;
+}
+
+
+
+
+
+.container .right_side {
+  position: relative;
+  background-color: #fff;
+  padding: 40;
+}
+
+
+.about{
+  margin-bottom: 50px;
+}
+
+.about:last-child
+{
+  margin-bottom: 0;
+}
+.title2{
+  color: #003147;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+p{
+  color: #333;
+  margin-left: 20px;
+}
+
+.about .box {
+  display: flex;
+  flex-direction:column;
+  margin: 20px;
+
+
+}
+
+.about .box .year_company {
+  min-width: 150px;
+}
+.about .box .year_company h5 {
+  text-transform: uppercase ;
+  color: #848c90;
+  font-weight: 600;
+  line-height: 1.4;
+
+}
+
+.about .box .text h5 {
+  text-transform: uppercase;
+  color: #2a7da2;
+  font-size: 16px;
+
+}
+
+.about .box ul {
+  margin-left: 20px;
+}
+
+.about.about.skills .box .year_company h5 {
+  text-transform: uppercase ;
+  color: #848c90;
+  font-weight: 600;
+  line-height: 1.4;
+
+}
+
+.about.skills .box .text h5 {
+  text-transform: uppercase;
+  color: #2a7da2;
+  font-size: 16px;
+
+}
+
+.about.skills .box ul {
+  margin-left: 20px;
+}
+
+.skills .box{
+  position: relative;
+  width: 100%;
+  
+  
+}
+
+.skills .box h4 {
+  text-transform: uppercase ;
+  color: #848c99;
+  font-weight: 500;
+}
+
+.skills .box .percent{
+  position: relative;
+  width: 90%;
+  height: 10px;
+  background: #f0f0f0;
+
+}
+
+.skills .box .percent div {
+  position: absolute;
+  top:0;
+  left:00;
+  height: 100%;
+  background: #03a9f4 ;
+
+}
+
+.interest ul{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+
+.interest ul li {
+  list-style: none ;
+  color: #333 ;
+  font-weight: 500;
+  margin: 10px 0;
+  margin-left: 20px;
+}
+
+.interest ul .fa {
+  color: #03a9f4;
+  font-size: 18px;
+  width:20px ;
+}
+
+@media (max-width:1000px){
+  .container{
+    margin: 10px;
+    grid-template-columns: repeat();
+
+  }
+.interest ul{
+  grid-template-columns: repeat();
+}
+
+}
+
+@media screen and (max-width:600px){
+  .about .box {
+    flex-direction: row;
+    
+  }
+  .about .box .year_company{
+    min-width: 150px;
+    margin-bottom: 5px;
+  }
+
+  .interest ul{
+    grid-template-columns: repeat(1,1fr);
+  }
+  .skill .box{
+    
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+
+.text {
+  line-height: 1.4;
+}
+
+@media screen and (min-width: 0px) and (max-width: 673px) {
+  .left_side{
+    grid-template-columns: repeat(1, 1fr);
+    margin-right: auto;
+  }
+
+  
+
+}
+  </style>
+  <body>
+    <div class="container">
+      <div class="left_side">
+        <div class="profileText">
+          <div class="image">
+            <img src="154206525_252364163105623_3919699518797329931_n.png" alt="dharmendr963 Image" />
+          </div>
+          <h2>Dharmendr Kumar <br /><span>Full Stack Web Devloper</span></h2>
+        </div>
+        <div class="contactInfo">
+          <h3 class="title">Contact Information</h3>
+          <ul>
+            <li>
+              <span class="icon"
+                ><i class="fa fa-phone" aria-hidden="true"></i
+              ></span>
+              <span class="text">9936186644</span>
+            </li>
+            <li>
+              <span class="icon"
+                ><i class="fa fa-envelope-o" aria-hidden="true"></i
+              ></span>
+              <span class="text">www.dkv9936@gmail.com</span>
+            </li>
+            <li>
+              <span class="icon"
+                ><i class="fa fa-map-marker" aria-hidden="true"></i
+              ></span>
+              <span class="text">Shahaganj , sonebhadra, India</span>
+            </li>
+            <li>
+              <span class="icon"
+                ><i class="fa fa-linkedin" aria-hidden="true"></i
+              ></span>
+
+            </li>
+            <li>
+              <span class="icon"
+                ><i class="fa fa-globe" aria-hidden="true"></i
+              ></span>
+              <span class="text"  ><a href="https://dharmendr963.github.io/responseresume/" target="_blank">Github</a></span>
+            </li>
+          </ul>
+        </div>
+         
+        <div class="contactInfo education">
+          <h3 class="title">Education</h3>
+          <ul>
+              <li>
+                <h5>2020-2022</h5>
+                <h4>Govarnment polytechnic sonebhadra</h4>
+                <h4>Branch- Computer science and engineering</h4>
+                
+              </li>
+
+              <li>
+                <h5>2013-2014</h5>
+                <h4>High School Certificate</h4>
+                <h4>M.s.R.s public high school Balua Enam sonebhadra </h4>
+                
+              </li>
+              <li><h5>2015-2016</h5>
+                <h4>intermediate Certificate</h4>
+                <h4>J B S inter collage shahaganj sonebhadra </h4>
+              </li>
+              
+
+                  
+          </ul>
+        </div>
+
+        <div class="contactInfo language">
+          <h3 class="title">Language</h3>
+          <ul>
+              <li>
+                <span class="text">English</span>
+                <span class="percent">
+                <div style="width: 85%;"></div></span>
+                </li>
+
+                <li>
+                  <span class="text">Hindi</span>
+                  <span class="percent">
+                  <div style="width: 90%;"></div></span>
+                  </li>
+
+                  <li>
+                    <span class="text">Bengali</span>
+                    <span class="percent">
+                    <div style="width: 30%;"></div>
+                  </span>
+                    </li>
+         </div>       
+      </div>
+
+
+      <div class="right_side">
+        <div class="about">
+          <h2 class="title2">Profile</h2>
+          <p>Seeking a position that will utilize my talent to enhance the growth of the
+            organization as well as to acquire fair amount of skills and knowledge for further
+            growth in my profession.</p>
+        </div>
+        <div class="about">
+          <h2 class="title2">Work Experience</h2>
+          <div class="box" >
+            <div class="year_company">
+              <h5>Dec 2019 - May 2020 </h5>
+              <h5>ICICI Prudential Life Insurance Company</h5>
+            </div>
+            <div class="text">
+              <h5>Direct Marketing</h5>
+              <div>
+              <ul>
+                <li>Selling Insurance Product To Existing Customers.</li>
+                <li>Building Relationship with Existing Customers.</li>
+              
+              </ul>
+            </div>
+            </div>
+          </div>
+           <div class="about skills">
+              <h2 class="title2">Internship and Certifications</h2>
+              <div class="box">
+                <div class="year_company">
+                <h5>DEC 2021 - JULY 2022 </h5>
+                
+              <h5>Newton School</h5>
+            </div>
+              
+            
+            <div class="text">
+              <h5>Newton School Coding Bootcamp Internship</h5>
+              <div>
+              <ul>
+                <li>Full Stack Web Development With Problem Solving</li>
+                <li>Technical Stack Learn- HTML, CSS, JS, JAVA, React and Bootstrap</li>
+                <li>Participated in various contest organized by the platform.</li>
+                <li>Working on Various Project : HTML, CSS Mini Projects</li>
+              
+              </ul>
+              </div>
+            
+
+              </div>
+           </div> 
+           <div class="about Projects">
+            <h2 class="title2">Projects</h2>
+
+
+            <div class="box">
+              <div class="year_company">
+              <h5>May 2022 - May 2022 </h5>
+              
+            <h5></h5>
+          </div>
+            
+          <div class="text">
+            <h5>Dino Game Chrome </h5>
+            <div>
+            <ul>
+              <li>Feature: Simple Game With Score Count</li>
+              <li>Tech stack: Java Script, HTML, CSS.</li>
+              
+            
+            </ul>
+            </div>
+          
+
+            </div>
+
+
+
+            
+
+            </div>
+            <div class="box">
+              <div class="year_company">
+              <h5>MAY 2022 - MAY 2022 </h5>
+              
+            <h5></h5>
+          </div>
+            
+          <div class="text">
+            <h5>Responsive Resume </h5>
+            <div>
+            <ul>
+              <li>A Responsive Resume Website</li>
+              <li>Tech Stack Used: HTML, CSS</li>
+              
+            
+            </ul>
+            </div>
+          
+
+            </div>
+            
+
+
+
+
+         </div> 
+          
+        </div>
+        <div class="about skills">
+          <h2 class="title2">Professional Skills</h2>
+          <div class="box">
+            <h4>JAVA</h4>
+            <div class="percent">
+              <div style="width: 40%;"></div>
+
+            </div>
+          </div>
+
+          <div class="box">
+            <h4>Html</h4>
+            <div class="percent">
+              <div style="width: 60%;"></div>
+              
+            </div>
+          </div>
+
+          <div class="box">
+            <h4>Css</h4>
+            <div class="percent">
+              <div style="width: 50%;"></div>
+              
+            </div>
+          </div>
+
+          <div class="box">
+            <h4>JavaScript</h4>
+            <div class="percent">
+              <div style="width: 50%;"></div>
+              
+            </div>
+          </div>
+
+        </div>
+
+        <div class="about interest">
+          <h2 class="title2">Interest</h2>
+          <ul>
+            <li><i class="fa fa-headphones" aria-hidden="true"></i>
+              Listening Music
+            </li>
+            <li><i class="fa fa-camera" aria-hidden="true"></i>
+              Photography
+            </li>
+            <li><i class="fa fa-youtube-play" aria-hidden="true"></i>
+              Watching Youtube
+            </li>
+          </ul>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
