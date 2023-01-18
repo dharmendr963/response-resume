@@ -1,6 +1,6 @@
 # response-resume
 
-repojetery live- Your site is live at https://dharmendr963.github.io/response-resume/
+repojetery link live- Your site is live at https://dharmendr963.github.io/response-resume/
 
 Screenshort-
 
